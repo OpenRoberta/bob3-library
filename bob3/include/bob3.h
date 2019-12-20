@@ -6,6 +6,10 @@
 #include <util/delay.h>
 #include "utils.h"
 
+#ifndef _CLAMP
+#define _CLAMP(x, lower, upper) (( (x) > (upper) ) ? (upper) : ( (x) < (lower) ? (lower) : (x) ))
+#endif
+
 void setup();
 void loop();
 
